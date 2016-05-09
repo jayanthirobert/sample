@@ -1,0 +1,88 @@
+{
+  "flight" : [
+    {
+      "flightCode": "LF",
+      "logo": "luftansa-logo.png",
+      "oneWay" : {
+        "flightNumber" : "202",
+        "from" : "MUC",
+        "to" : "ROM",
+        "departureTime" : "2016-03-21T06:15:00Z",
+        "arrivalTime" : "2016-03-21T08:15:00Z",
+        "price" : "€100",
+        "destinationPic" : "rome-colosseum.jpg"
+      },
+      "return" : {
+        "flightNumber" : "212",
+        "from" : "ROM",
+        "to" : "HAM",
+        "departureTime" : "2016-03-27T09:15:00Z",
+        "arrivalTime" : "2016-03-27T11:15:00Z",
+        "price" : "€200"
+      }
+    },
+    {
+      "flightCode": "SW",
+      "logo": "swiss-logo.png",
+      "oneWay" : {
+        "flightNumber" : "202",
+        "from" : "MUC",
+        "to" : "ROM",
+        "departureTime" : "2016-03-21T06:15:00Z",
+        "arrivalTime" : "2016-03-21T08:15:00Z",
+        "price" : "€110",
+        "destinationPic" : "rome-spanish-steps.jpg"
+      },
+      "return" : {
+        "flightNumber" : "222",
+        "from" : "ROM",
+        "to" : "HAM",
+        "departureTime" : "2016-03-27T09:15:00Z",
+        "arrivalTime" : "2016-03-27T11:15:00Z",
+        "price" : "€220"
+      }
+    },
+    {
+      "flightCode": "BU",
+      "logo": "brussels-logo.png",
+      "oneWay" : {
+        "flightNumber" : "202",
+        "from" : "MUC",
+        "to" : "ROM",
+        "departureTime" : "2016-03-21T06:15:00Z",
+        "arrivalTime" : "2016-03-21T08:15:00Z",
+        "price" : "€100",
+        "destinationPic" : "rome-trevi-fountain.jpg"
+      },
+      "return" : {
+        "flightNumber" : "202",
+        "from" : "ROM",
+        "to" : "HAM",
+        "departureTime" : "2016-03-27T09:15:00Z",
+        "arrivalTime" : "2016-03-27T11:15:00Z",
+        "price" : "€200"
+      }
+    },
+    {
+      "flightCode": "LF",
+      "logo": "luftansa-logo.png",
+      "oneWay" : {
+        "flightNumber" : "202",
+        "from" : "MUC",
+        "to" : "ROM",
+        "departureTime" : "2016-03-21T06:15:00Z",
+        "arrivalTime" : "2016-03-21T08:15:00Z",
+        "price" : "€100",
+        "destinationPic" : "rome-trevi-fountain.jpg"
+      },
+      "return" : {
+        "flightNumber" : "202",
+        "from" : "ROM",
+        "to" : "HAM",
+        "departureTime" : "2016-03-27T09:15:00Z",
+        "arrivalTime" : "2016-03-27T11:15:00Z",
+        "price" : "€200"
+      }
+    }
+  ]
+}

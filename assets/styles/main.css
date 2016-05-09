@@ -1,0 +1,220 @@
+body {
+    background: url('../images/hero-background.jpg') fixed no-repeat center 5rem transparent;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #000;
+}
+
+.main-bg {
+    background: rgba(0,0,0,0.05);
+}
+
+.main-wrapper {
+    padding: 9rem 0 0 0;
+}
+
+header {
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    background-color: #EF5BA1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+}
+
+.page-title h1{
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    margin: 1.5rem 0;
+}
+
+.main-content{
+    padding: 1rem;
+    background: linear-gradient(to top right, rgba(255,255,255,0.8), rgba(255,255,255,0.10));
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    transition: all 0.5s;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-bottom: 0;
+}
+
+.tab-content {
+    padding: 1rem;
+}
+
+#search-tab.nav-tabs li a{
+    background-color: #eee;
+    opacity: .7;
+}
+
+#search-tab.nav-tabs li.active a{
+    background-color: #EF5BA1;
+    color: #fff;
+    border: 0;
+    opacity: 1;
+}
+
+.main-results {
+    margin: 1rem 0 0 0;
+}
+
+.main-results h2 {
+    font-size: 2.5rem;
+}
+
+.main-results-header {
+    background-color: #fff;
+}
+.main-results p {
+    margin: 0;
+}
+.main-results ul li {
+    font-size: 1.2rem;
+}
+.main-results ul li:first-child {
+    padding: .5rem 0;
+}
+
+.main-results ul li span {
+    font-size: 1.8rem;
+}
+.main-results h2 {
+    margin-top: 0;
+}
+.main-results .price {
+    font-size: 2.5rem;
+}
+
+.main-results button, .main-results .price {
+    margin: 2rem 0;
+}
+.search-data  {
+    position: relative;
+    padding-bottom: .5rem;
+}
+.search-data span{
+    color: #192436;
+    position: absolute;
+    z-index: 999;
+    top: 25%;
+    left: 3%;
+    font-size: 1em;
+}
+.search-data span + input{
+    padding-left: 30px;
+}
+.btn-search {
+    width: 60%;
+    margin: 0 20%;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.main-content .nav-tabs {
+    border-bottom: 1px solid red;
+}
+
+.main-content .nav-tabs>li {
+    margin-bottom: -2px;
+}
+
+.logo {
+    position: absolute;
+    right: 2rem;
+    bottom: .5rem;
+    max-width: 20%;
+    width: 20%;
+}
+
+.fsslider {
+    position: relative;
+    min-width: 150px;
+    height: 24px;
+    display: inline-block;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:#000;
+}
+.fsslider{
+    text-align: center;
+    line-height: 24px;
+    font-size: 11px;
+    font-family: "Lucida Grande", "Trebuchet MS", sans-serif;
+}
+.fsslider > *{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+.fsslider > .fsfull-value, .fsslider > .fssel-value {
+    margin-top: -1px;
+    height: 2px;
+    left: 0;
+    right: 0;
+}
+.fsslider > .fsfull-value {
+    width: 100%;
+    background: #d8d8d8;
+}
+.fsslider > .fssel-left, .fsslider > .fssel-right, .fsslider > .fscaret {
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    height: 100%;
+    min-width: 30px;
+    top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.fsslider > .fssel-value {
+    /*background: #ff7c19;*/
+    background: #27c470;
+    height: 4px;
+    margin-top: -2px;
+    right: 50%;
+}
+.fsslider > .fscaret:before {
+    content: '€';
+}
+.fsslider.fsdisabled {
+    color:#c8c8c8;
+}
+.fsslider.fsdisabled > .fssel-value {
+    background: #c8c8c8;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+#priceRange {
+    margin: 1rem 0;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        background: url('../images/hero-background-small.jpg') fixed no-repeat center 5rem;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .main-results button, .main-results .price {
+        margin: .5rem 0 0 0;
+    }
+
+    .main-results ul li:first-child {
+        padding: 1rem 0 0 0;
+    }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Flight Search Engine</title>
+    <meta name="description" content="Flight Search Engine">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jayanthi Robert">
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/datepicker.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-bg">
+    <header>
+        <div class="container">
+            <div class="col-md-12 page-title">
+                <h1>Flight Search Engine</h1>
+            </div>
+        </div>
+    </header>
+    <section class="main-wrapper">
+        <div class="container">
+            <div class="col-md-3 col-sm-12">
+                <div class="main-content">
+                    <ul class="nav nav-tabs" id="search-tab">
+                        <li role="tabpanel"><a href="#oneway">One way</a></li>
+                        <li role="tabpanel" class="active"><a href="#twoway">Return</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane" id="oneway">
+                            <form data-toggle="validator" role="form">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <label for="inputFrom">From</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                        <input type="text" placeholder="Type Departure City" id="inputFrom" class="form-control" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="inputDestination">Destination</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                        <input type="text" placeholder="Type Destination City" id="inputDestination" class="form-control" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="inputDepartDate">Departure Date</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                        <input type="text" placeholder="Type Departure Date" id="inputDepartDate" class="form-control" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="inputPassengers">Passengers</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                        <input type="number" placeholder="Type Passengers" min="1" id="inputPassengers" class="form-control" required>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-search" type="submit">Search</button>
+                                </form>
+                        </div>
+                        <div role="tabpanel" class="tab-pane active" id="twoway">
+                            <form data-toggle="validator" role="form">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <label for="tInputFrom">From</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                        <input type="text" placeholder="Type Departure City" id="tInputFrom" class="form-control" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="tInputDestination">Destination</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                        <input type="text" placeholder="Type Destination City" id="tInputDestination" class="form-control" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="tInputDepartDate">Departure Date</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                        <input type="text" placeholder="Type Departure Date" id="tInputDepartDate" class="form-control" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="tInputReturnDate">Return Date</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                        <input type="text" placeholder="Type Return Date" id="tInputReturnDate" class="form-control" required>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="tInputPassengers">Passengers</label>
+                                    <div class="search-data">
+                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                        <input type="number" placeholder="Type Passengers" min="1" id="tInputPassengers" class="form-control" required>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-search" type="submit">Search</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content" id="price-range">
+                    <label>Refine Flight Search</label>
+                    <div id="priceRange">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-12 main-results">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <h2>Your Results</h2>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <p class="text-right">
+                            <span>Depart: </span>18th Apr 2016
+                        </p>
+                        <p class="text-right">
+                            <span>Return: </span>21th Apr 2016
+                        </p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12">
+                            <img src="assets/images/rome-colosseum.jpg" alt="" longdesc="hamburg to rome"/>
+                            <img class="logo" src="assets/images/luftansa-logo.png" alt="luftansa" />
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>LF-202</li>
+                                <li><span>HAM > FCO</span></li>
+                                <li>Depart: 10:00 AM</li>
+                                <li>Arrive: 1.40 PM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>LF-202</li>
+                                <li><span>FCO > HAM</span></li>
+                                <li>Depart: 5:00 PM</li>
+                                <li>Arrive: 8.45 PM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 price col-xs-5 text-center">
+                            &euro;201.00
+                        </div>
+                        <div class="col-md-3 col-xs-7">
+                            <button class="btn btn-primary" type="submit">Select this flight</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12">
+                            <img src="assets/images/rome-spanish-steps.jpg" alt="" longdesc="hamburg to rome"/>
+                            <img class="logo" src="assets/images/swiss-logo.png" alt="swiss" />
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>SW-212</li>
+                                <li><span>HAM > FCO</span></li>
+                                <li>Depart: 08:00 AM</li>
+                                <li>Arrive: 12.00 PM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>AI-222</li>
+                                <li><span>FCO > HAM</span></li>
+                                <li>Depart: 10:00 AM</li>
+                                <li>Arrive: 2.00 PM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 price col-xs-5 text-center">
+                            &euro;225.00
+                        </div>
+                        <div class="col-md-3 col-xs-7">
+                            <button class="btn btn-primary" type="submit">Select this flight</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12">
+                            <img src="assets/images/rome-trevi-fountain.jpg" alt="" longdesc="hamburg to rome"/>
+                            <img class="logo" src="assets/images/brussels-logo.png" alt="brussels" />
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>BU-222</li>
+                                <li><span>HAM > FCO</span></li>
+                                <li>Depart: 12:00 AM</li>
+                                <li>Arrive: 4.00 PM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>BU-222</li>
+                                <li><span>FCO > HAM</span></li>
+                                <li>Depart: 10:00 AM</li>
+                                <li>Arrive: 2.00 PM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 price col-xs-5 text-center">
+                            &euro;270.00
+                        </div>
+                        <div class="col-md-3 col-xs-7">
+                            <button class="btn btn-primary" type="submit">Select this flight</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12">
+                            <img src="assets/images/rome-st-peters-church.jpg" alt="" longdesc="hamburg to rome"/>
+                            <img class="logo" src="assets/images/luftansa-logo.png" alt="luftansa" />
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>LF-288</li>
+                                <li><span>HAM > FCO</span></li>
+                                <li>Depart: 10:00 PM</li>
+                                <li>Arrive: 2.00 AM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-xs-6">
+                            <ul class="list-unstyled">
+                                <li>LF-288</li>
+                                <li><span>FCO > HAM</span></li>
+                                <li>Depart: 10:00 AM</li>
+                                <li>Arrive: 2.00 PM</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 price col-xs-5 text-center">
+                            &euro;275.00
+                        </div>
+                        <div class="col-md-2 col-xs-7">
+                            <button class="btn btn-primary" type="submit">Select this flight</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="list-data"></ul>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &copy; 2016 Jayanthi Robert
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="scripts/jquery-1.12.3.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/bootstrap-datepicker.js"></script>
+<script src="scripts/freshslider.1.0.0.js"></script>
+<script src="scripts/main.js"></script>
+<noscript>
+    Your browser does not support JavaScript. Please activate it.
+</noscript>
+</body>
+</html>
